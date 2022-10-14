@@ -1,5 +1,89 @@
-/* .App
+
+.App
 {
   display: flex;
   justify-content: center;
-} */
+  background-color: black;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.keypad
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator
+{
+  width: 80vw;
+  height: 80vh;
+  padding : 30px;
+  max-width: 500px;
+  border-radius : 15px;
+  background-color: black;
+}
+
+h1
+{
+  color : white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.numbers
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  width: max-content;
+  height: 50%;
+}
+
+.btn
+{
+  height: 10vh;
+  width: 10vh;
+  border-radius: 100%;
+  background-color: rgb(102, 98, 89);
+}
+
+.zero
+{
+  position: relative;
+  bottom: 0;
+  left: 110px;
+}
+
+.operations
+{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+  width: max-content;
+  height: 50%;
+  margin-left: 30px;
+}
+
+.result
+{
+  position: absolute;
+  bottom: 17.9vh;
+  left: 21vh;;
+}
+
+.display{
+  height: 20vh;
+  display: flex;
+  text-align: right;
+  align-items: center;
+  justify-content: end;
+}
+
+.display h1
+{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

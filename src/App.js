@@ -60,19 +60,29 @@ function App() {
     op = "";
 
     setNumber(displayNumber + " = " + result);
-
-    console.log(num1);
   };
 
   return (
     <div className="App">
+      <div className="calculator">
       <div className="display">
         <h1>{displayNumber}</h1>
+      </div>
+      <div className = 'keypad'>
+      <div className="result">
+        <button
+          className="btn"
+          onClick={() => {
+            resultDisplay();
+          }}
+        >
+          =
+        </button>
       </div>
       <div className="numbers">
         {numbers.map((number) => (
           <button
-            className="btn"
+            className={`btn ${number === 0 ? "zero" : ""}`}
             onClick={() => {
               numberClick(number);
             }}
@@ -95,15 +105,9 @@ function App() {
           </button>
         ))}
       </div>
-      <div className="result">
-        <button
-          className="btn"
-          onClick={() => {
-            resultDisplay();
-          }}
-        >
-          =
-        </button>
+      
+      </div>
+      
       </div>
     </div>
   );
